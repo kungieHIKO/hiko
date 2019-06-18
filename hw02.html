@@ -58,7 +58,6 @@
      voteable="第"+zhou+"周课程表";
      document.getElementById("demo").innerHTML=voteable;}
      
-    
     var obj=[['', '星期一', '星期二', '星期三', '星期四', '星期五'],
     ['第一大节', 'Web应用开发技术', '大学英语四级', '管理信息系统', '数据库/运营管理', '大学英语四级'],
     ['第二大节','毛泽东思想与中国特色社会主义理论体系概论', '管理科学基础', '毛泽东思想与中国特色社会主义理论体系概论', '管理科学基础', '运营管理'],
@@ -70,7 +69,6 @@
     ['', '一公教C105<br>1-15周<br>刘烨', '一公教C123<br>5-7周<br>邵夏李坤', '一公教B101<br>1-17周<br>刘晓晖', '体育馆<br>1-14周<br>薛松', '一公教A120<br>1-16周<br>顾洪英'],
     ['', '一公教B303<br>3-17周<br>张亮', '一公教C109<br>1-15周<br>吴君', '', '一公教B101<br>1-17周<br>刘晓晖', '']];
    
-    
     var tbEl = document.getElementById('grid');
     for(var i=0;i<5;i++){
     var tr = document.createElement("tr");
@@ -112,9 +110,7 @@
     tbEl.append(tr);
     }
      
-  
      function q() {
-      var tableInfo = "";
     var tableObj = document.getElementById('grid'); 
     var minweek=[[0,0,0,0,0,0],[0,1,1,1,1,1],[0,1,3,1,3,1],
     [0,1,5,1,1,1],[0,3,1,0,1,0]];
@@ -122,9 +118,7 @@
     [111, 15,7,17,14,16],[111,17,15,0,17,0]];
     for (var i = 0; i < tableObj.rows.length; i++) {    
         for (var j = 0; j < tableObj.rows[i].cells.length; j++) { 
-          tableInfo = tableObj.rows[i].cells[j].backgroundColor;
           var zhou=document.getElementById("week").value;
-          console.log(tableObj.rows[i].cells[j].className);
     if(maxweek[i][j]<zhou||minweek[i][j]>zhou){tableObj.rows[i].cells[j].className = 'meike';}
     else{tableObj.rows[i].cells[j].className = 'youke';
     tableObj.rows[i].cells[0].className = 'ths';}
